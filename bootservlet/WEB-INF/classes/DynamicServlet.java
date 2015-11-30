@@ -19,32 +19,31 @@ public class DynamicServlet extends HttpServlet {
 			switch (option) {
 				case "apples":
 					request.setAttribute("img", "apples.jpg");
-					request.setAttribute("jumboText", "<h1>Yay, Apple it is!</h1>");
+					request.setAttribute("fruit", "Apple");
 					break;
 
 				case "oranges":
 					request.setAttribute("img", "oranges.jpg");
-					request.setAttribute("jumboText", "<h1>Yay, Orange it is!</h1>");
+					request.setAttribute("fruit", "Orange");
 					break;
 
 				case "strawberries":
 					request.setAttribute("img", "strawberries.jpg");
-					request.setAttribute("jumboText", "<h1>Yay, Strawberries it is!</h1>");
+					request.setAttribute("fruit", "Strawberries");
 					break;
 
 				case "salad":
 					request.setAttribute("img", "salad.jpg");
-					request.setAttribute("jumboText", "<h1>Yay, A Fruit Salad!</h1>");
+					request.setAttribute("fruit", "Fruit Salad");
 					break;
 
 				default:
-					request.setAttribute("jumboText", "No Fruit for you!");
 					break;
 			}
 		} catch (NullPointerException e) {
-			request.setAttribute("jumboText", "<h1>No Fruit for you!</h1>");
 			request.setAttribute("grad", "0.0");
 			request.setAttribute("color", "inherit");
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
 
 		request.getRequestDispatcher("index.jsp").forward(request, response);
