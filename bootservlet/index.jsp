@@ -89,17 +89,12 @@
 			</nav>	<!-- /nav -->
 
 			<div class="container">	<!-- jumbotron-container -->
-			<div class="jumbotron">
-			<%
-			if(request.getParameter("img")==null)
-			{%>
-				
-					<h1>Hello, World!</h1>
-			<%}
-			else{%>
-					<h1>Yay, ${fruit} it is!</h1>
-			<%}%>
-			<p>${param.img}</p>
+
+				<div class="jumbotron">
+					<h1 class="conceal">Hello, Bootstrap!</h1>
+					${jumboText}
+					<p>Responsive design with Bootstrap 3</p>
+					<button type="button" class="btn btn-info">Get App</button> 
 				</div>	<!-- /jumbotron --> 
 
 			</div>	<!-- /jumbotron container -->

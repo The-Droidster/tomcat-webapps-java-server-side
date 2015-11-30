@@ -19,7 +19,7 @@ public class DynamicServlet extends HttpServlet {
 			switch (option) {
 				case "apples":
 					request.setAttribute("img", "apples.jpg");
-					request.setAttribute("fruit", "Apple");
+					request.setAttribute("jumboText", "<h1>Yay, Apple it is!</h1>");
 					break;
 
 				case "oranges":
