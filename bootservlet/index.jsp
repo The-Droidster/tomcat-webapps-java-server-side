@@ -43,10 +43,6 @@
 				background-size: cover;
 				color: ${color};
 			}
-	
-			.conceal {
-				display: ${display};
-			}
 		</style>
 
 	</head>
@@ -91,8 +87,7 @@
 			<div class="container">	<!-- jumbotron-container -->
 
 				<div class="jumbotron">
-					<h1>${empty fruit ? 'Hello, Bootstrap!' : 'Yay, ' += fruit += ' it is!'}</h1>
-					
+					<h1>${empty fruit ? 'Hello, Bootstrap!' : 'Yay, ' += fruit += ' it is!'}</h1>					
 					<p>Responsive design with Bootstrap 3</p>
 					<button type="button" class="btn btn-info">Get App</button> 
 				</div>	<!-- /jumbotron --> 
